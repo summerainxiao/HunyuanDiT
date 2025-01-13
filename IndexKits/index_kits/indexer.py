@@ -838,6 +838,9 @@ class IndexV2Builder(object):
             "example_indices": [],
         }
 
+    def to_index_v2(self):
+        return ArrowIndexV2(res_dict=self.encode())
+        
     def build(self, save_path):
         return self.save(save_path)
 
